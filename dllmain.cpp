@@ -6,7 +6,7 @@ inline const char* const GetStringFromBoolean(bool value)
     return value ? "true" : "false";
 }
 
-void SendMSG()
+VOID Main()
 {
     ConHost console;
     console.Print("sdk", "loaded with success\n");
@@ -18,7 +18,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        SendMSG();
+        Main();
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:
